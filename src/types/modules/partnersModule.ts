@@ -9,7 +9,10 @@ export interface IPartnersModule {
   };
   list?: Array<IPartnerItem>;
   commonStyles: {
-    paddingVertical?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
+    mobilePaddingTop?: string;
+    mobilePaddingBottom?: string;
     defaultBackgroundColor?: string;
     defaultCardBackgroundColor?: string;
   };

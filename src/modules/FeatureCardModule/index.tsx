@@ -16,14 +16,14 @@ export default function FeatureCardModule({
   module: { title, subTitle, featureList, commonStyles },
 }: FeatureCardModuleProps) {
   const { getVertical } = useGetVertical();
-  const { paddingVertical, defaultBackgroundColor } = commonStyles || {};
+  const { defaultBackgroundColor } = commonStyles || {};
   return (
     <motion.div initial={INITIAL} whileInView={WHILE_IN_VIEW} viewport={VIEWPORT}>
       <section
         className={clsx(['section-container', 'flex-column-center', styles.featureCardModuleWrapper])}
         style={{
-          paddingTop: getVertical(paddingVertical ?? DEFAULT_PADDING_VERTICAL) + 'px',
-          paddingBottom: getVertical(paddingVertical ?? DEFAULT_PADDING_VERTICAL) + 'px',
+          paddingTop: getVertical(commonStyles || {}).top + 'px',
+          paddingBottom: getVertical(commonStyles || {}).bottom + 'px',
           backgroundColor: defaultBackgroundColor,
         }}>
         <div className={clsx(['page-container', 'flex-column-center'], styles.featureCardModuleContentWrapper)}>

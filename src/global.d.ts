@@ -1,6 +1,5 @@
 /// <reference types="react-scripts" />
 
-declare module 'aelf-sdk';
 declare module 'query-string';
 
 // throw error without declaring

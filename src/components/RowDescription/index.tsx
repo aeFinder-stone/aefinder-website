@@ -13,6 +13,7 @@ export interface RowDescriptionProps {
   className?: string;
   subContentList?: Array<DescriptionComponent>;
   multiLayer?: boolean;
+  isLast: boolean;
 }
 
 export default function RowDescription(props: RowDescriptionProps) {
@@ -26,12 +27,13 @@ export default function RowDescription(props: RowDescriptionProps) {
     className,
     subContentList,
     multiLayer = false,
+    isLast = false,
   } = props;
 
   return (
     <div
       className={clsx([styles.rowDescription, className])}
-      style={multiLayer ? { marginBottom: '40px' } : { marginBottom: '16px' }}>
+      style={{ marginBottom: isLast ? '0' : multiLayer ? '40px' : '16px' }}>
       {iconSrc && (
         <CommonImage
           src={iconSrc}

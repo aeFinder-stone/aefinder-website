@@ -16,7 +16,7 @@ const DEFAULT_PADDING_VERTICAL = 120;
 
 export default function GraphicTextModule({ module }: GraphicTextModuleProps) {
   const { getVertical } = useGetVertical();
-  const { paddingVertical, defaultBackgroundColor } = module.commonStyles;
+  const { defaultBackgroundColor } = module.commonStyles;
   if (module.type === GraphicTextModuleType.TopPicture_BottomText) {
     return <TopPicture module={module} />;
   }
@@ -27,8 +27,8 @@ export default function GraphicTextModule({ module }: GraphicTextModuleProps) {
         className={clsx(['section-container', 'flex-column-center', styles.graphicTextModule])}
         style={{
           backgroundColor: defaultBackgroundColor,
-          paddingTop: getVertical(paddingVertical ?? DEFAULT_PADDING_VERTICAL) + 'px',
-          paddingBottom: getVertical(paddingVertical ?? DEFAULT_PADDING_VERTICAL) + 'px',
+          paddingTop: getVertical(module.commonStyles).top + 'px',
+          paddingBottom: getVertical(module.commonStyles).bottom + 'px',
         }}>
         {module.title?.text && (
           <motion.div variants={variantDownToUp(0)}>

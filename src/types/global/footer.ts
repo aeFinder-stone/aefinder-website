@@ -17,6 +17,8 @@ export type Footer = {
 export type FooterCommonStyles = {
   defaultBackgroundColor?: string;
   dividingLineColor?: string;
+  secondMenuDefaultFontColor?: string;
+  secondMenuFontHoverColor?: string;
 };
 
 export type SocialMedia = {

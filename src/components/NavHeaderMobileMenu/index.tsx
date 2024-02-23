@@ -10,6 +10,7 @@ import MenuArrowSVG from '@/components/SVGComponents/MenuArrowSVG';
 import { Popup } from 'antd-mobile';
 import { Header } from '@/types/global/header';
 import { s3Url } from '@/constants/network';
+import CloseSVG from '../SVGComponents/CloseSVG';
 
 enum HiddenSecondType {
   ALL_HIDDEN = 'none',
@@ -69,15 +70,9 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
           priority
           onClick={() => jumpOrScrollToTop(ROUTER.DEFAULT, onClose)}
         />
-        <CommonImage
-          src={iconClose}
-          style={{ width: 24, height: 24, cursor: 'pointer' }}
-          width={24}
-          height={24}
-          alt="websiteMenu"
-          onClick={onClose}
-          priority
-        />
+        <div style={{ cursor: 'pointer' }} onClick={onClose} className={styles.closeIcon}>
+          <CloseSVG />
+        </div>
       </div>
       <div className={styles.menusWrap}>
         {menuData?.map((item, index) => {
@@ -95,7 +90,7 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
                       ? () => switchPage(item.type, item.path, onClose)
                       : () => showSecondMenus(index)
                   }>
-                  <span className="text-black-btn overflow-x-hidden">{item.title}</span>
+                  <span className="header-nav-btn overflow-x-hidden">{item.title}</span>
                   {item?.children?.length > 0 && <MenuArrowSVG />}
                 </div>
                 {item?.children?.length > 0 && (

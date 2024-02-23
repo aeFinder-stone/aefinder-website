@@ -15,7 +15,10 @@ export interface IInfiniteScrollCarouselModule {
   };
   carouselList: Array<IInfiniteScrollCarouselItem>;
   commonStyles: {
-    paddingVertical?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
+    mobilePaddingTop?: string;
+    mobilePaddingBottom?: string;
     defaultBackgroundColor?: string;
   };
 }

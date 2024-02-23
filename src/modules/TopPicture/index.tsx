@@ -15,7 +15,7 @@ const DEFAULT_PADDING_VERTICAL = 120;
 
 export default function TopPicture({ module }: FeatureDescModuleProps) {
   const { getVertical } = useGetVertical();
-  const { paddingVertical, defaultBackgroundColor } = module.commonStyles || {};
+  const { defaultBackgroundColor } = module.commonStyles || {};
 
   const renderTxt = useMemo(
     () =>
@@ -42,8 +42,8 @@ export default function TopPicture({ module }: FeatureDescModuleProps) {
     <section
       className={clsx(['section-container', styles.featureDescModuleWrap])}
       style={{
-        paddingTop: getVertical(paddingVertical ?? DEFAULT_PADDING_VERTICAL) + 'px',
-        paddingBottom: getVertical(paddingVertical ?? DEFAULT_PADDING_VERTICAL) + 'px',
+        paddingTop: getVertical(module.commonStyles).top + 'px',
+        paddingBottom: getVertical(module.commonStyles).bottom + 'px',
         backgroundColor: defaultBackgroundColor,
       }}>
       <section className={styles.container}>

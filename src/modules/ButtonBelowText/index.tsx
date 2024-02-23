@@ -20,8 +20,8 @@ export function ButtonBelowTextModule({ module }: IButtonBelowTextProps) {
       className={clsx(['section-container', styles.sectionWrap])}
       style={{
         backgroundColor: commonStyles.defaultBackgroundColor,
-        paddingTop: commonStyles.paddingVertical ? getVertical(commonStyles.paddingVertical) + 'px' : 'auto',
-        paddingBottom: commonStyles.paddingVertical ? getVertical(commonStyles.paddingVertical) + 'px' : 'auto',
+        paddingTop: getVertical(commonStyles).top + 'px',
+        paddingBottom: getVertical(commonStyles).bottom + 'px',
       }}>
       <section className={styles.container}>
         <h1 className={styles.title}>{title.text}</h1>
@@ -30,6 +30,7 @@ export function ButtonBelowTextModule({ module }: IButtonBelowTextProps) {
             {descriptionList.map((item, index) => {
               return (
                 <RowDescription
+                  isLast={index === descriptionList.length - 1}
                   key={'Description' + '_' + index}
                   className={styles.descriptionItem}
                   iconSrc={item.icon?.filename_disk ? s3Url + item.icon?.filename_disk : ''}

@@ -54,11 +54,11 @@
           font-weight: 400;
           font-size: 14px;
           line-height: 20px;
-          color: $primary-text;
+          color: var(--secondMenuDefaultFontColor);
           margin-bottom: 8px;
           cursor: pointer;
           &:hover {
-            color: $brand;
+            color: var(--secondMenuFontHoverColor);
           }
         }
       }

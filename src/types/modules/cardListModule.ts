@@ -12,7 +12,10 @@ export interface ICardListModule {
   };
   dataArray?: Array<DescriptionComponent>;
   commonStyles: {
-    paddingVertical?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
+    mobilePaddingTop?: string;
+    mobilePaddingBottom?: string;
     defaultBackgroundColor?: string;
     defaultCardBackgroundColor?: string;
     defaultImgContainerBackgroundColor?: string;

@@ -66,6 +66,20 @@ a {
   background-color: transparent;
 }
 
+.header-nav-btn {
+  @extend .text-btn-base;
+
+  color: var(--firstMenuDefaultFontColor);
+  &:hover {
+    @extend .header-nav-btn-select;
+  }
+}
+
+.header-nav-btn-select {
+  color: var(--firstMenuFontHoverColor);
+  background-color: transparent;
+}
+
 .home-page {
   overflow-x: hidden;
   @media screen and (max-width: $divide-991) {

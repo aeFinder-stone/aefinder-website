@@ -8,14 +8,10 @@ export type WebsiteNetworkConfig = {
 export const BackEndNetWorkMap: Record<string, WebsiteNetworkConfig> = {
   aefinder: {
     dev: {
-      name: 'aefinder Testnet',
-      networkType: 'TESTNET',
       cmsUrl: 'https://testhome.aefinder.io/cms/',
       s3Url: 'https://aefinder-dev.s3.ap-northeast-1.amazonaws.com/',
     },
     mainnet: {
-      name: 'aefinder Mainnet',
-      networkType: 'MAIN',
       cmsUrl: 'https://cms.aefinder.io',
       s3Url: 'https://aefinder.s3.ap-northeast-1.amazonaws.com/',
     },

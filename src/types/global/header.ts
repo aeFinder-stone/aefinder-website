@@ -13,6 +13,8 @@ export type Header = {
 
 export type HeaderCommonStyles = {
   defaultBackgroundColor?: string;
+  firstMenuDefaultFontColor?: string;
+  firstMenuFontHoverColor?: string;
 };
 
 export type HeaderType = 'default';

@@ -15,7 +15,10 @@ export interface IBrandModule {
   descriptionList: Array<DescriptionComponent>;
   buttonList: Array<ButtonComponent>;
   commonStyles: {
-    paddingVertical?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
+    mobilePaddingTop?: string;
+    mobilePaddingBottom?: string;
     defaultBackgroundColor?: string;
   };
 }

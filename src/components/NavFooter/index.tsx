@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import CommonImage from '@/components/CommonImage';
 import { NavigationType, ROUTER } from '@/constants/enum';
 import LinkForBlank from '@/components/LinkForBlank';
-import { CSSProperties, useCallback, useMemo, useState } from 'react';
+import { CSSProperties, useCallback, useEffect, useMemo, useState } from 'react';
 import { jumpOrScrollToTop, switchPage } from '@/utils/router';
 import { getFullYear } from '@/utils/time';
 import styles from './styles.module.scss';
@@ -38,6 +38,21 @@ export default function NavFooter({ className, style, footerMediaClassName, data
     }
     return 142;
   }, [data.logo?.height, data.logo?.width]);
+
+  useEffect(() => {
+    if (!data?.commonStyles) {
+      return;
+    }
+    if (typeof document !== 'undefined') {
+      const { secondMenuDefaultFontColor, secondMenuFontHoverColor } = data?.commonStyles || {};
+      if (secondMenuDefaultFontColor) {
+        document?.body.style.setProperty('--secondMenuDefaultFontColor', secondMenuDefaultFontColor);
+      }
+      if (secondMenuFontHoverColor) {
+        document?.body.style.setProperty('--secondMenuFontHoverColor', secondMenuFontHoverColor);
+      }
+    }
+  }, [data]);
 
   return (
     <footer

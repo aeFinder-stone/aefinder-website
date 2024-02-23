@@ -18,7 +18,6 @@ export interface BrandModuleProps {
 
 export default function BrandModule({ type, moduleData }: BrandModuleProps) {
   const { getVertical } = useGetVertical();
-  const { paddingVertical } = moduleData.commonStyles;
   return (
     <section
       className={clsx([
@@ -31,8 +30,8 @@ export default function BrandModule({ type, moduleData }: BrandModuleProps) {
         backgroundImage: `url(${
           moduleData?.backgroundImage?.filename_disk ? s3Url + moduleData?.backgroundImage?.filename_disk : ''
         })`,
-        paddingTop: paddingVertical ? getVertical(paddingVertical) + 'px' : 'auto',
-        paddingBottom: paddingVertical ? getVertical(paddingVertical) + 'px' : 'auto',
+        paddingTop: getVertical(moduleData.commonStyles).top + 'px',
+        paddingBottom: getVertical(moduleData.commonStyles).bottom + 'px',
       }}>
       <section className={clsx([styles.brandModuleContainer, styles.brandModule])}>
         <section className={styles.brandModuleLeft}>
@@ -47,6 +46,7 @@ export default function BrandModule({ type, moduleData }: BrandModuleProps) {
               moduleData.descriptionList.map((item, idx) => {
                 return (
                   <RowDescription
+                    isLast={idx === moduleData.descriptionList.length - 1}
                     key={'BrandModule_Description' + '_' + idx}
                     className={styles.desc}
                     iconSrc={item.icon?.filename_disk ? s3Url + item.icon?.filename_disk : ''}
@@ -79,6 +79,7 @@ export default function BrandModule({ type, moduleData }: BrandModuleProps) {
                     fontColor={btn.commonStyles.default?.fontColor}
                     backgroundColor={btn.commonStyles.default?.backgroundColor}
                     borderColor={btn.commonStyles.default?.borderColor}
+                    width={btn.commonStyles.width ? btn.commonStyles.width + 'px' : 'auto'}
                     onClick={() => openWithBlank(btn.link?.url, btn.link?.target)}
                   />
                 );

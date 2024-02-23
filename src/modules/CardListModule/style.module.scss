@@ -41,6 +41,8 @@
   border: 2px solid var(--border);
   width: 100%;
   overflow: hidden;
+  max-width: 728px;
+  margin: auto;
 }
 
 .cardDesc {

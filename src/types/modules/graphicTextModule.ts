@@ -17,7 +17,10 @@ export interface IGraphicTextModule {
   buttonList: Array<CommonButtonComponent>;
   type: GraphicTextModuleType; // default value is "LeftPicture_RightText"
   commonStyles: {
-    paddingVertical?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
+    mobilePaddingTop?: string;
+    mobilePaddingBottom?: string;
     defaultBackgroundColor?: string;
   };
 }

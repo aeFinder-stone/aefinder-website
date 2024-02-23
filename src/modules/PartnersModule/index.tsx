@@ -11,15 +11,13 @@ interface IPartnersModuleProps {
 
 export default function PartnersModule({ module }: IPartnersModuleProps) {
   const { title, list, commonStyles } = module;
-  const { paddingVertical } = commonStyles;
   const { getVertical } = useGetVertical();
   return (
     <section
       className={clsx(['section-container', styles.partnersModuleWrap])}
       style={{
-        backgroundColor: module.commonStyles?.defaultBackgroundColor,
-        paddingTop: paddingVertical ? getVertical(paddingVertical) + 'px' : 'auto',
-        paddingBottom: paddingVertical ? getVertical(paddingVertical) + 'px' : 'auto',
+        paddingTop: getVertical(commonStyles).top + 'px',
+        paddingBottom: getVertical(commonStyles).bottom + 'px',
       }}>
       <section className={styles.content}>
         <h1 className={styles.sectionTitle}>{title?.text}</h1>

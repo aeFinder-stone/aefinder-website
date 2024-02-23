@@ -51,8 +51,8 @@ export default function CardListModule({ moduleData }: ICardListModuleProps) {
       className={clsx(['section-container', styles.cardListModuleWrap])}
       style={{
         backgroundColor: commonStyles.defaultBackgroundColor,
-        paddingTop: commonStyles.paddingVertical ? getVertical(commonStyles.paddingVertical) + 'px' : 'auto',
-        paddingBottom: commonStyles.paddingVertical ? getVertical(commonStyles.paddingVertical) + 'px' : 'auto',
+        paddingTop: getVertical(commonStyles).top + 'px',
+        paddingBottom: getVertical(commonStyles).bottom + 'px',
       }}>
       <section className={styles.cardListModule}>
         <h1 className={styles.title}>{title?.text}</h1>
