@@ -3,10 +3,10 @@
   "version": "1.1.4",
   "private": true,
   "scripts": {
-    "dev": "NEXT_PUBLIC_NODE_ENV=development NEXT_PUBLIC_NETWORK_ENV=dev NEXT_PUBLIC_WEBSITE_NAME=DAPP next dev",
+    "dev": "NEXT_PUBLIC_NODE_ENV=development NEXT_PUBLIC_NETWORK_ENV=dev NEXT_PUBLIC_WEBSITE_NAME=aefinder next dev",
     "out": "SKIP_SSR=1 next build && next export",
-    "build:dev": "NEXT_PUBLIC_NETWORK_ENV=dev NEXT_PUBLIC_WEBSITE_NAME=DAPP next build",
-    "build:pro": "NEXT_PUBLIC_NETWORK_ENV=mainnet NEXT_PUBLIC_WEBSITE_NAME=DAPP next build",
+    "build:dev": "NEXT_PUBLIC_NETWORK_ENV=dev NEXT_PUBLIC_WEBSITE_NAME=aefinder next build",
+    "build:pro": "NEXT_PUBLIC_NETWORK_ENV=mainnet NEXT_PUBLIC_WEBSITE_NAME=aefinder next build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

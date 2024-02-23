@@ -18,6 +18,7 @@ import { IInfiniteScrollCarouselItem } from '@/types/modules/infiniteScrollCarou
 export const getGlobalConfig = async (): Promise<GlobalConfig> => {
   try {
     const { data } = await get(API.GET.GLOBAL_CONFIG);
+
     return {
       meta: {
         favicon: data.metaFavicon?.filename_disk ? s3Url + data.metaFavicon?.filename_disk : '',

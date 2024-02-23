@@ -12,7 +12,6 @@ export function interceptorsBind(axios: AxiosInstance) {
 
   axios.interceptors.response.use(
     (response) => {
-      console.log('response', response);
       return response;
     },
     (error) => {
