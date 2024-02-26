@@ -89,6 +89,7 @@ export default function InfiniteScrollCarousel({ carouselList }: IInfiniteScroll
           {renderCarouselItems()}
         </div>
       </motion.div>
+      <div className={styles.infiniteScrollCarouselMask} />
     </div>
   );
 }

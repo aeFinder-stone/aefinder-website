@@ -26,7 +26,6 @@ export default function TopPicture({ module }: FeatureDescModuleProps) {
             <RowDescription
               isLast={idx === (item.children as Array<DescriptionComponent>).length - 1}
               key={'TopPicture_Description' + '_' + idx}
-              className={styles.desc}
               iconSrc={item.icon?.filename_disk ? s3Url + item.icon?.filename_disk : ''}
               gap={10}
               content={item.text || ''}

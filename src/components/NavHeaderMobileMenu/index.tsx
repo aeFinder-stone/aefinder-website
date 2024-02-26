@@ -1,5 +1,4 @@
 import { Button } from 'antd';
-import { iconClose } from '@/assets/images';
 import clsx from 'clsx';
 import CommonImage from '@/components/CommonImage';
 import styles from './styles.module.scss';

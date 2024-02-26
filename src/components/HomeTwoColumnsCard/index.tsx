@@ -64,6 +64,7 @@ export default function HomeTwoColumnsCard(props: HomeTwoColumnsCardProps) {
                   iconWidth={item?.iconWidth}
                   iconHeight={item?.iconHeight}
                   content={item.text || ''}
+                  contentColor={style?.color}
                   gap={item?.iconMarginRight}
                   isLast={idx === contents.length - 1}
                 />

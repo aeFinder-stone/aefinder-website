@@ -10,8 +10,6 @@ interface FeatureCardModuleProps {
   module: IFeatureCardModule;
 }
 
-const DEFAULT_PADDING_VERTICAL = 120;
-
 export default function FeatureCardModule({
   module: { title, subTitle, featureList, commonStyles },
 }: FeatureCardModuleProps) {

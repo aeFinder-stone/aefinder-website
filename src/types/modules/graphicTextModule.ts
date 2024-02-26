@@ -1,5 +1,5 @@
 import { ModuleType } from '.';
-import { ButtonComponent, CommonButtonComponent } from '../components/button';
+import { CommonButtonComponent } from '../components/button';
 import { DescriptionComponent } from '../components/description';
 import { ImageWrapper } from '../components/image';
 
@@ -9,6 +9,7 @@ export interface IGraphicTextModule {
   image: ImageWrapper;
   title?: {
     text: string;
+    subText?: string;
   };
   subTitle?: {
     text: string;
@@ -22,6 +23,7 @@ export interface IGraphicTextModule {
     mobilePaddingTop?: string;
     mobilePaddingBottom?: string;
     defaultBackgroundColor?: string;
+    fontColor?: string;
   };
 }
 

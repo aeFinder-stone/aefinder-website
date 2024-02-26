@@ -152,11 +152,11 @@
     }
   }
 
-  @media screen and (max-width: $divide-991) {
-    .desc {
-      text-align: center;
-    }
-  }
+  // @media screen and (max-width: $divide-991) {
+  //   .desc {
+  //     text-align: center;
+  //   }
+  // }
 
   @media screen and (min-width: 1079px) {
     max-width: $content-width-large-desktop;
