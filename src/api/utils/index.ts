@@ -170,6 +170,7 @@ const formatModule = (moduleItem: any): Module | undefined => {
         image: moduleItem.image,
         title: {
           text: moduleItem.title,
+          subText: moduleItem.titleDescription,
         },
         subTitle: {
           text: moduleItem.subTitle,
@@ -183,6 +184,7 @@ const formatModule = (moduleItem: any): Module | undefined => {
           mobilePaddingTop: moduleItem.mobilePaddingTop || undefined,
           mobilePaddingBottom: moduleItem.mobilePaddingBottom || undefined,
           defaultBackgroundColor: moduleItem.defaultBackgroundColor || undefined,
+          fontColor: moduleItem.fontColor || '',
         },
       };
     case ModuleType.CardListModule:

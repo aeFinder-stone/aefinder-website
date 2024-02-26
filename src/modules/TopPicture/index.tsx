@@ -3,15 +3,16 @@ import { s3Url } from '@/constants/network';
 import clsx from 'clsx';
 import { useMemo } from 'react';
 import { IGraphicTextModule } from '@/types/modules/graphicTextModule';
+import RowDescription from '@/components/RowDescription';
+import { DescriptionComponent } from '@/types/components/description';
+
+import useGetVertical from '@/hooks/useGetVertical';
 
 import styles from './styles.module.scss';
-import useGetVertical from '@/hooks/useGetVertical';
 
 export interface FeatureDescModuleProps {
   module: IGraphicTextModule;
 }
-
-const DEFAULT_PADDING_VERTICAL = 120;
 
 export default function TopPicture({ module }: FeatureDescModuleProps) {
   const { getVertical } = useGetVertical();
@@ -21,18 +22,15 @@ export default function TopPicture({ module }: FeatureDescModuleProps) {
     () =>
       module.descriptionList?.map((list) => (
         <div key={list.index}>
-          {list.children?.map((txt, i) => {
-            if (i === 0) {
-              return <span key={txt.index}>{txt.text}</span>;
-            }
-
-            return (
-              <>
-                <br />
-                <span key={txt.index}>{txt.text}</span>
-              </>
-            );
-          })}
+          {list.children?.map((item, idx) => (
+            <RowDescription
+              isLast={idx === (item.children as Array<DescriptionComponent>).length - 1}
+              key={'TopPicture_Description' + '_' + idx}
+              iconSrc={item.icon?.filename_disk ? s3Url + item.icon?.filename_disk : ''}
+              gap={10}
+              content={item.text || ''}
+            />
+          ))}
         </div>
       )),
     [module.descriptionList],

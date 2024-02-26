@@ -8,8 +8,6 @@ interface IInfiniteScrollCarouselModuleProps {
   module: IInfiniteScrollCarouselModule;
 }
 
-const DEFAULT_PADDING_VERTICAL = 120;
-
 export default function InfiniteScrollCarouselModule({
   module: { commonStyles, title, carouselList },
 }: IInfiniteScrollCarouselModuleProps) {

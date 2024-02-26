@@ -4,7 +4,6 @@ import CommonImage from '@/components/CommonImage';
 import { NavigationType, ROUTER } from '@/constants/enum';
 import { CSSProperties, useEffect, useState } from 'react';
 import styles from './styles.module.scss';
-import { iconMenuGray, iconNavSelectedBlue } from '@/assets/images';
 import NavHeaderMobileMenu from '@/components/NavHeaderMobileMenu';
 import { jumpOrScrollToTop, openWithBlank, switchPage } from '@/utils/router';
 import MenuArrowSVG from '@/components/SVGComponents/MenuArrowSVG';

@@ -14,6 +14,16 @@
     max-width: $content-width-large-desktop;
     margin: auto;
   }
+
+  .sectionSubTitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 18px;
+    text-align: center;
+    color: $secondary-text;
+  }
+
   .graphicTextModuleItem {
     margin-bottom: 120px;
 

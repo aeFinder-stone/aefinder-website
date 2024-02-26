@@ -10,6 +10,7 @@ export interface RowDescriptionProps {
   gap?: number;
   content: string;
   contentSize?: number;
+  contentColor?: string;
   className?: string;
   subContentList?: Array<DescriptionComponent>;
   multiLayer?: boolean;
@@ -24,6 +25,7 @@ export default function RowDescription(props: RowDescriptionProps) {
     gap = 16,
     content = '',
     contentSize,
+    contentColor,
     className,
     subContentList,
     multiLayer = false,
@@ -46,7 +48,7 @@ export default function RowDescription(props: RowDescriptionProps) {
       {Array.isArray(subContentList) && subContentList.length > 0 ? (
         <SecondaryList content={content} subContentList={subContentList} />
       ) : (
-        <div className={multiLayer ? styles.title : ''} style={{ fontSize: contentSize }}>
+        <div className={multiLayer ? styles.title : ''} style={{ fontSize: contentSize, color: contentColor }}>
           {content}
         </div>
       )}
