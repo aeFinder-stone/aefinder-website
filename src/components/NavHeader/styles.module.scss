@@ -83,11 +83,11 @@
       }
     }
 
-    &:hover{
+    &:hover {
       svg path {
         fill: var(--firstMenuFontHoverColor);
       }
-    } 
+    }
   }
 
   .rotateSvg {
@@ -99,11 +99,8 @@
 
 .secondMenus {
   :global {
-    .ant-popover-inner-content {
-      background-color: var(--normalBg) !important;
-      border-radius: 6px;
-      border: 1px solid var(--border) !important;
-      overflow: hidden;
+    .ant-popover-arrow {
+      top: 1px;
     }
     .ant-popover-arrow-content {
       box-sizing: content-box;
@@ -112,8 +109,14 @@
     .ant-popover-arrow-content::before {
       background-color: var(--normalBg) !important;
     }
+    .ant-popover-inner-content {
+      background-color: var(--normalBg) !important;
+      border-radius: 6px;
+      border: 1px solid var(--border) !important;
+      overflow: hidden;
+    }
     .ant-popover-inner {
-      background:none !important;
+      background: none !important;
       overflow: hidden !important;
       border-radius: 6px;
     }
